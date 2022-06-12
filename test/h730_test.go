@@ -8,6 +8,7 @@ import (
 
 func Test730(t *testing.T) {
 	fmt.Println(countPalindromicSubsequences("abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba"))
+	fmt.Println(countPalindromicSubsequences2("abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba"))
 }
 
 func countPalindromicSubsequences2(S string) int {

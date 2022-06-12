@@ -21,10 +21,10 @@ func Constructor11(radius float64, x_center float64, y_center float64) Solution1
 	}
 }
 
-func (this *Solution11) RandPoint() []float64 {
-	r := math.Sqrt(rand.Float64()) * this.radius
+func (s *Solution11) RandPoint() []float64 {
+	r := math.Sqrt(rand.Float64()) * s.radius
 	sin, cos := math.Sincos(rand.Float64() * 2 * math.Pi)
-	return []float64{this.x_center + r*sin, this.y_center + r*cos}
+	return []float64{s.x_center + r*sin, s.y_center + r*cos}
 }
 
 func Test478(t *testing.T) {
