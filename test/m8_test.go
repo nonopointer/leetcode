@@ -7,12 +7,12 @@ import (
 )
 
 func myAtoi(s string) int {
-	fmt.Println(s)
+	//fmt.Println(s)
 	res := make([]byte, 0)
 	flag := -1 // -1 not start 0 start 1 end
 	var zf int64 = 1
-	for i, v := range s {
-		fmt.Printf("%d\t%v\n", i, res)
+	for _, v := range s {
+		//fmt.Printf("%d\t%v\n", i, res)
 		if flag == 1 {
 			break
 		}
