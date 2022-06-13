@@ -26,8 +26,7 @@ func heightChecker(heights []int) int {
 		}
 	}
 	res := 0
-	fmt.Println(target)
-	fmt.Println(heights)
+
 	for i := range target {
 		if target[i] != heights[i] {
 			res++
