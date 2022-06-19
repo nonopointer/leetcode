@@ -1,12 +1,16 @@
 package test
 
 import (
+	"fmt"
 	"math"
 	"testing"
 )
 
 func Test508(t *testing.T) {
-
+	root := &TreeNode{
+		Val: 1,
+	}
+	fmt.Println(findFrequentTreeSum(root))
 }
 
 /**
@@ -24,14 +28,13 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-var mm = make(map[int]int)
-var max = math.MinInt
-
 func findFrequentTreeSum(root *TreeNode) []int {
 
-	dfs(root)
+	var mm = make(map[int]int)
+	var max = math.MinInt
+
+	dfs(root, mm, &max)
 	res := make([]int, 0)
-	// fmt.Println(mm)
 
 	for k, v := range mm {
 		if v == max {
@@ -41,13 +44,13 @@ func findFrequentTreeSum(root *TreeNode) []int {
 	return res
 }
 
-func dfs(cur *TreeNode) int {
+func dfs(cur *TreeNode, mm map[int]int, max *int) int {
 	cnt := cur.Val
 	if cur.Left != nil {
-		cnt += dfs(cur.Left)
+		cnt += dfs(cur.Left, mm, max)
 	}
 	if cur.Right != nil {
-		cnt += dfs(cur.Right)
+		cnt += dfs(cur.Right, mm, max)
 	}
 
 	if v, ok := mm[cnt]; ok {
@@ -55,8 +58,8 @@ func dfs(cur *TreeNode) int {
 	} else {
 		mm[cnt] = 1
 	}
-	if mm[cnt] > max {
-		max = mm[cnt]
+	if mm[cnt] > *max {
+		*max = mm[cnt]
 	}
 	return cnt
 }
