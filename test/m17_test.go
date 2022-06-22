@@ -9,37 +9,37 @@ func Test17(t *testing.T) {
 	fmt.Println(letterCombinations("23"))
 }
 
+var phoneMap = map[string]string{
+	"2": "abc",
+	"3": "def",
+	"4": "ghi",
+	"5": "jkl",
+	"6": "mno",
+	"7": "pqrs",
+	"8": "tuv",
+	"9": "wxyz",
+}
+
+var combinations []string
+
 func letterCombinations(digits string) []string {
-	mm := make(map[rune][]rune)
-
-	mm['2'] = []rune{'a', 'b', 'c'}
-	mm['3'] = []rune{'d', 'e', 'f'}
-	mm['4'] = []rune{'g', 'h', 'i'}
-	mm['5'] = []rune{'j', 'k', 'l'}
-	mm['6'] = []rune{'m', 'n', 'o'}
-	mm['7'] = []rune{'p', 'q', 'r', 's'}
-	mm['8'] = []rune{'t', 'u', 'v'}
-	mm['9'] = []rune{'w', 'x', 'y', 'z'}
-
-	res := make([]string, 0)
-	lex := len(digits)
-	cs := make([][]rune, lex)
-	for i, v := range digits {
-		cs[i] = mm[v]
+	if len(digits) == 0 {
+		return []string{}
 	}
-	resMap := make(map[string]struct{})
-	for _, vs := range cs {
-		word := make([]rune, lex)
-		idx := 0
-		for _, v := range vs {
-			fmt.Println(idx)
-			word[idx] = v
-			idx++
+	combinations = []string{}
+	backtrack(digits, 0, "")
+	return combinations
+}
+
+func backtrack(digits string, index int, combination string) {
+	if index == len(digits) {
+		combinations = append(combinations, combination)
+	} else {
+		digit := string(digits[index])
+		letters := phoneMap[digit]
+		lettersCount := len(letters)
+		for i := 0; i < lettersCount; i++ {
+			backtrack(digits, index+1, combination+string(letters[i]))
 		}
-		resMap[string(word)] = struct{}{}
 	}
-	for v := range resMap {
-		res = append(res, v)
-	}
-	return res
 }

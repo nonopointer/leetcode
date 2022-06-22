@@ -7,11 +7,10 @@ import (
 )
 
 type Solution struct {
-
 	rects [][]int
 }
 
-func Constructor(rects [][]int) Solution {
+func Constructor497(rects [][]int) Solution {
 
 	return Solution{
 		rects: rects,
@@ -29,6 +28,6 @@ func (s *Solution) Pick() []int {
 }
 
 func Test497(t *testing.T) {
-	s := Constructor([][]int{{1, 1, 5, 5}})
+	s := Constructor497([][]int{{1, 1, 5, 5}})
 	fmt.Println(s.Pick())
 }
