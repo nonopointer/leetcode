@@ -22,7 +22,7 @@ func findPairs(nums []int, k int) int {
 		}
 	}
 
-	for v, _ := range mm {
+	for v := range mm {
 		if _, ok := mm[v+k]; ok {
 			cnt++
 		}

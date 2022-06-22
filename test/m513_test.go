@@ -6,7 +6,7 @@ import (
 )
 
 func Test513(t *testing.T) {
-
+	fmt.Println(findBottomLeftValue(&TreeNode513{Val: 1}))
 }
 
 /**

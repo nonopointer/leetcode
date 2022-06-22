@@ -8,6 +8,7 @@ import (
 
 func Test1108(t *testing.T) {
 	fmt.Println(defangIPaddr("1.1.1.1"))
+	fmt.Println(defangIPaddr1("1.1.1.1"))
 }
 
 func defangIPaddr(address string) string {

@@ -22,9 +22,6 @@ func (r *RangeModule) QueryRange(left int, right int) bool {
 	return false
 }
 
-func (this *RangeModule) RemoveRange(left int, right int) {
-
-}
 
 func Test715(t *testing.T) {
 

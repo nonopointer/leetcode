@@ -1,9 +1,12 @@
 package test
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestOff029(t *testing.T) {
-
+	fmt.Println(insert(&Nodeoff029{},1))
 }
 
 /**
@@ -14,27 +17,27 @@ func TestOff029(t *testing.T) {
  * }
  */
 
-type Node struct {
+type Nodeoff029 struct {
 	Val  int
-	Next *Node
+	Next *Nodeoff029
 }
 
-func insert(aNode *Node, x int) *Node {
+func insert(aNode *Nodeoff029, x int) *Nodeoff029 {
 	if aNode == nil {
-		t := &Node{
+		t := &Nodeoff029{
 			Val: x,
 		}
 		t.Next = t
 		return t
 	}
 	if aNode.Next == aNode {
-		aNode.Next = &Node{
+		aNode.Next = &Nodeoff029{
 			Val:  x,
 			Next: aNode,
 		}
 		return aNode
 	}
-	var temp *Node
+	var temp *Nodeoff029
 	temp = aNode.Next
 
 	min, max := aNode.Val, aNode.Val
@@ -51,7 +54,7 @@ func insert(aNode *Node, x int) *Node {
 	if x <= min || x >= max {
 		for {
 			if temp.Val == max {
-				temp.Next = &Node{
+				temp.Next = &Nodeoff029{
 					Val:  x,
 					Next: temp.Next,
 				}
@@ -62,7 +65,7 @@ func insert(aNode *Node, x int) *Node {
 	} else {
 		for {
 			if temp.Val <= x && temp.Next.Val >= x {
-				temp.Next = &Node{
+				temp.Next = &Nodeoff029{
 					Val:  x,
 					Next: temp.Next,
 				}

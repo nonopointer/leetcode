@@ -22,9 +22,6 @@ func duplicateZeros(arr []int) {
 	}
 	// fmt.Println(arr)
 	// arr = arr2
-
-	for i, v := range arr2 {
-		arr[i] = v
-	}
+	copy(arr,arr2)
 	// fmt.Println(arr)
 }
