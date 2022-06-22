@@ -7,7 +7,7 @@ import (
 )
 
 func Test508(t *testing.T) {
-	root := &TreeNode{
+	root := &TreeNode508{
 		Val: 1,
 	}
 	fmt.Println(findFrequentTreeSum(root))
