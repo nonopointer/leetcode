@@ -18,16 +18,16 @@ func Test508(t *testing.T) {
  * }
  */
 
-type TreeNode struct {
+type TreeNode508 struct {
 	Val   int
-	Left  *TreeNode
-	Right *TreeNode
+	Left  *TreeNode508
+	Right *TreeNode508
 }
 
 var mm = make(map[int]int)
 var max = math.MinInt
 
-func findFrequentTreeSum(root *TreeNode) []int {
+func findFrequentTreeSum(root *TreeNode508) []int {
 
 	dfs(root)
 	res := make([]int, 0)
@@ -41,7 +41,7 @@ func findFrequentTreeSum(root *TreeNode) []int {
 	return res
 }
 
-func dfs(cur *TreeNode) int {
+func dfs(cur *TreeNode508) int {
 	cnt := cur.Val
 	if cur.Left != nil {
 		cnt += dfs(cur.Left)

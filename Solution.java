@@ -1,3 +1,5 @@
+import java.util.concurrent.ConcurrentLinkedDeque;
+
 /*
  * @lc app=leetcode.cn id=141 lang=java
  *
@@ -26,6 +28,9 @@
   }
 public class Solution {
     public static void main(String[] args){
+
+        ConcurrentLinkedDeque deque = new ConcurrentLinkedDeque<>();
+        deque.add(1);
     }
     public boolean hasCycle(ListNode head) {
         if (head == null) return false;
