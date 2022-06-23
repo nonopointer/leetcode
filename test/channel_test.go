@@ -63,7 +63,7 @@ func TestCh1(t *testing.T) {
 
 func TestCh2(t *testing.T) {
 	i := 0
-	ch := make(chan string, 0)
+	ch := make(chan string)
 	defer close(ch)
 	go func() {
 	CuiStartLoop: //不加也可以,与后面break后的 CuiStartLoop相呼应,作为循环体的标识
