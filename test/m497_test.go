@@ -6,18 +6,18 @@ import (
 	"testing"
 )
 
-type Solution struct {
+type Solution497 struct {
 	rects [][]int
 }
 
-func Constructor497(rects [][]int) Solution {
+func Constructor497(rects [][]int) Solution497 {
 
-	return Solution{
+	return Solution497{
 		rects: rects,
 	}
 }
 
-func (s *Solution) Pick() []int {
+func (s *Solution497) Pick() []int {
 	var x int
 	var y int
 	points := s.rects[rand.Intn(len(s.rects))]

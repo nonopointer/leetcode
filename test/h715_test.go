@@ -6,7 +6,7 @@ type RangeModule struct {
 	mm map[int]int
 }
 
-func Constructor() RangeModule {
+func Constructor715() RangeModule {
 	return RangeModule{mm: make(map[int]int)}
 }
 
