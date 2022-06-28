@@ -13,35 +13,35 @@ func Test710(t *testing.T) {
 	*/
 }
 
-type Solution struct {
+type Solution710 struct {
 	sign int
 	base []bool
 }
 
-func Constructor(n int, blacklist []int) Solution {
+func Constructor(n int, blacklist []int) Solution710 {
 	base := make([]bool, n)
 	for _, v := range blacklist {
 		base[v] = true
 	}
-	res := Solution{
+	res := Solution710{
 		sign: n,
 		base: base,
 	}
 	return res
 }
 
-func (this *Solution) Pick() int {
-	res := rand.Intn(this.sign)
+func (s *Solution710) Pick() int {
+	res := rand.Intn(s.sign)
 	temp, cnt := 0, 0
 	for cnt < res {
-		if !this.base[temp] {
+		if !s.base[temp] {
 			cnt++
 		}
 		if cnt == res {
 			return temp
 		}
 		temp++
-		if temp == this.sign {
+		if temp == s.sign {
 			temp = 0
 		}
 	}
