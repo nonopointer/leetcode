@@ -18,7 +18,7 @@ type Solution710 struct {
 	base []bool
 }
 
-func Constructor(n int, blacklist []int) Solution710 {
+func Constructor710(n int, blacklist []int) Solution710 {
 	base := make([]bool, n)
 	for _, v := range blacklist {
 		base[v] = true
