@@ -7,7 +7,7 @@ import (
 )
 
 func Test241(t *testing.T) {
-	fmt.Println(diffWaysToCompute("1-1+2"))s
+	fmt.Println(diffWaysToCompute("1-1+2"))
 }
 
 func diffWaysToCompute(expression string) []int {
