@@ -59,7 +59,7 @@ type MyCalendar struct {
 	zones [][]int
 }
 
-func Constructor() MyCalendar {
+func Constructor729() MyCalendar {
 	return MyCalendar{zones: [][]int{}}
 }
 
@@ -74,7 +74,7 @@ func (this *MyCalendar) Book(start int, end int) bool {
 	return true
 }
 func Test729(t *testing.T) {
-	c := Constructor()
+	c := Constructor729()
 	fmt.Println(c.Book(1, 2))
 	fmt.Println(c.Book(2, 4))
 	fmt.Println(c.Book(5, 6))
