@@ -6,14 +6,13 @@ import (
 	"unsafe"
 )
 
-
 func TestEm(t *testing.T) {
 
 	x := []int{
-        1,
-        2,
+		1,
+		2,
 	}
-    _ = x
+	_ = x
 
 	var s1 struct{}
 	var s2 struct{}
@@ -43,4 +42,21 @@ func TestEm(t *testing.T) {
 
 	<-signChan1
 	fmt.Println("Over !")
+}
+
+func TestNew(t *testing.T) {
+	s := new([]int)
+	fmt.Printf("%p\n", s)
+	*s = append(*s, 1)
+	fmt.Println(s, *s, len(*s), cap(*s))
+	fmt.Printf("%p\n%p\n", s, &(*s)[0])
+
+	var a [1]int
+	a[0] = 1
+	// fmt.Println(a)
+	fmt.Printf("a\t\n%p\n%p\n", &a, &a[0])
+	var a2 = [...]int{1, 2, 3}
+	fmt.Printf("a2\t\n%p\n%p\n", &a2, &a2[0])
+
+	// scm:= sync.Map{}
 }
