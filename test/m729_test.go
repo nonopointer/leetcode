@@ -63,14 +63,14 @@ func Constructor729() MyCalendar {
 	return MyCalendar{zones: [][]int{}}
 }
 
-func (this *MyCalendar) Book(start int, end int) bool {
+func (m *MyCalendar) Book(start int, end int) bool {
 	zone := []int{start, end}
-	for _, z := range this.zones {
+	for _, z := range m.zones {
 		if z[0] < end && z[1] > start {
 			return false
 		}
 	}
-	this.zones = append(this.zones, zone)
+	m.zones = append(m.zones, zone)
 	return true
 }
 func Test729(t *testing.T) {

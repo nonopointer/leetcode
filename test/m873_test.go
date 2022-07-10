@@ -37,23 +37,3 @@ func max(a, b int) int {
     }
     return a
 }
-
-
-func lenLongestFibSubseq1(arr []int) int {
-	lex := len(arr)
-	last := arr[lex-1]
-	mm := map[int]int{}
-	for a, b := 1, 1; b <= last; {
-		mm[b] = 1
-		temp := a + b
-		a = b
-		b = temp
-	}
-
-	fmt.Println(mm)
-	res := 0
-	for _, v := range arr {
-		res += mm[v]
-	}
-	return res
-}
