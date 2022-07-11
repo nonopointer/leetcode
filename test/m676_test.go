@@ -7,22 +7,22 @@ import (
 
 type MagicDictionary map[string]bool
 
-func Constructor() MagicDictionary {
+func Constructor676() MagicDictionary {
 	return MagicDictionary{}
 }
 
-func (this *MagicDictionary) BuildDict(dictionary []string) {
+func (m *MagicDictionary) BuildDict(dictionary []string) {
 	for _, v := range dictionary {
-		(*this)[v] = true
+		(*m)[v] = true
 	}
 }
 
 const base = "qwertyuioplkjhgfdsazxcvbnm"
 
-func (this *MagicDictionary) Search(searchWord string) bool {
+func (m *MagicDictionary) Search(searchWord string) bool {
 	// temp :=
 	for i := range searchWord {
-		if checkword(i, searchWord, this) {
+		if checkword(i, searchWord, m) {
 			return true
 		}
 	}
@@ -45,7 +45,7 @@ func checkword(idx int, word string, dic *MagicDictionary) bool {
 }
 
 func Test676(t *testing.T) {
-	m := Constructor()
+	m := Constructor676()
 	m["aa"] = true
 	fmt.Println(m)
 	fmt.Println(m.Search("ab"))
