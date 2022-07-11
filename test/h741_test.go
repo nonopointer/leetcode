@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"testing"
+
 )
 
 var N, INF = 55, math.MinInt
@@ -59,5 +60,14 @@ func Max(a, b int) int {
 }
 
 func Test741(t *testing.T) {
-	fmt.Println(cherryPickup([][]int{{0, 1, -1}, {1, 0, -1}, {1, 1, 1}}))
+	fmt.Println(cherryPickup([][]int{
+		{1, 1, 1, 1, 0, 0, 0},
+		{0, 0, 0, 1, 0, 0, 0},
+		{0, 0, 0, 1, 0, 0, 1},
+		{1, 0, 0, 1, 0, 0, 0},
+		{0, 0, 0, 1, 0, 0, 0},
+		{0, 0, 0, 1, 0, 0, 0},
+		{0, 0, 0, 1, 1, 1, 1}}))
+
+
 }
