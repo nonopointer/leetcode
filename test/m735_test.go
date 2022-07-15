@@ -1,5 +1,10 @@
 package test
 
+import (
+	"fmt"
+	"testing"
+)
+
 func asteroidCollision(asteroids []int) (st []int) {
 	for _, aster := range asteroids {
 		alive := true
@@ -15,4 +20,8 @@ func asteroidCollision(asteroids []int) (st []int) {
 	}
 	return st
 
+}
+
+func Test735(t *testing.T) {
+	fmt.Println(asteroidCollision([]int{1, 2, 3, -1}))
 }
