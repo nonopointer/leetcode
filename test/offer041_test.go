@@ -20,17 +20,17 @@ func Constructor(size int) MovingAverage {
 	}
 }
 
-func (this *MovingAverage) Next(val int) float64 {
-	lex := len(this.base)
+func (m *MovingAverage) Next(val int) float64 {
+	lex := len(m.base)
 	var head int
-	if lex == this.size {
-		head = this.base[0]
-		this.base = this.base[1:]
-		this.sum -= head
+	if lex == m.size {
+		head = m.base[0]
+		m.base = m.base[1:]
+		m.sum -= head
 	}
-	this.base = append(this.base, val)
-	this.sum += val
-	return float64(this.sum) / float64(len(this.base))
+	m.base = append(m.base, val)
+	m.sum += val
+	return float64(m.sum) / float64(len(m.base))
 }
 
 func TestFloat(t *testing.T) {
