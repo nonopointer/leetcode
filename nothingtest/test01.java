@@ -4,6 +4,7 @@ import java.util.*;
 
 public class test01 {
     public static void main(String[] args) throws InterruptedException {
+
         Random r = new Random();
         test01 t = new test01();
         for(int i = 0;i < 10; i ++ ){
