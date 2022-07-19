@@ -12,7 +12,7 @@ type MovingAverage struct {
 }
 
 /** Initialize your data structure here. */
-func Constructor(size int) MovingAverage {
+func Constructor041(size int) MovingAverage {
 	return MovingAverage{
 		base: []int{},
 		size: size,
@@ -36,7 +36,7 @@ func (m *MovingAverage) Next(val int) float64 {
 func TestFloat(t *testing.T) {
 	// fmt.Println(float64(4) / float64(3))
 
-	ma := Constructor(3)
+	ma := Constructor041(3)
 	fmt.Println(ma.Next(1))
 	fmt.Println(ma.Next(10))
 	fmt.Println(ma.Next(3))
