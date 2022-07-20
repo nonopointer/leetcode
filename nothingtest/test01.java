@@ -4,10 +4,8 @@ import java.util.*;
 
 public class test01 {
     public static void main(String[] args) throws InterruptedException {
-
-        Random r = new Random();
         test01 t = new test01();
-        for(int i = 0;i < 10; i ++ ){
+        for (int i = 0; i < 10; i++) {
             System.out.println(t.generate(25));
         }
     }
@@ -19,8 +17,8 @@ public class test01 {
             tem[idx++] = (char) ('a' + i);
             tem[idx++] = (char) ('A' + i);
         }
-        for(int i = 0 ; i < 10 ;i++){
-            tem[idx++] =(char)('0'+ i);
+        for (int i = 0; i < 10; i++) {
+            tem[idx++] = (char) ('0' + i);
         }
         Random r = new Random();
         char[] result = new char[n];

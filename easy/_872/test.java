@@ -17,7 +17,7 @@ public class test {
              }
          }
     public static void main(String[] args){
-        List<Integer> l = new LinkedList();
+        List<Integer> l = new LinkedList<>();
         l.add(1);
         l.add(2);
         l.add(1);
@@ -28,9 +28,9 @@ public class test {
         System.out.println(l);
         System.out.println(l.size());
     }
-    static List<Integer> l1 = new LinkedList();
-    static List<Integer> l2 = new LinkedList();
-    static List<Integer> l = new LinkedList();
+    static List<Integer> l1 = new LinkedList<>();
+    static List<Integer> l2 = new LinkedList<>();
+    static List<Integer> l = new LinkedList<>();
     public boolean leafSimilar(TreeNode root1, TreeNode root2) {
         searchAdd(l1,root1);
         searchAdd(l2,root2);

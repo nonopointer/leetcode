@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class test {
     public static void main(String[] args){
-        int i = "".hashCode();
+        // int i = "".hashCode();
     }
     class ListNode {
              int val;

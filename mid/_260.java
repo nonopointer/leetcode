@@ -25,8 +25,8 @@ public class _260 {
 
     public static int[] singleNumber1(int[] nums) {
         if(nums.length == 2 ) return nums;
-        List<Integer> a = new ArrayList<>();
-        List<Integer> b = new ArrayList<>();
+        // List<Integer> a = new ArrayList<>();
+        // List<Integer> b = new ArrayList<>();
         int[] rs = new int[2];
 
         int tem = 0;

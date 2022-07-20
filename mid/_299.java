@@ -1,5 +1,4 @@
 package mid;
-import java.util.*;
 
 public class _299 {
     public static void main(String[] args){

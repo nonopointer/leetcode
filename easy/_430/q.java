@@ -1,7 +1,5 @@
 package easy._430;
 
-import java.util.*;
-import java.util.Stack;
 
 public class q {
     public static void main(String[] args) {

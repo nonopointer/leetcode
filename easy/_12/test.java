@@ -35,7 +35,7 @@ public class test {
     }
     //1 <= num <= 3999
     public static String intToRoman(int num) {
-        StringBuilder s = new StringBuilder();
+        // StringBuilder s = new StringBuilder();
         int t = num,idx = 0;
         int[] arr = new int[4];
         while(t>0){

@@ -15,22 +15,22 @@ public class test {
         //     wall.add(row);
         // }
 
-        int[] r1 = {1,2,2,1};
-        int[] r2 = {3,1,2};
-        int[] r3 = {1,3,2};
-        int[] r4 = {2,4};
-        int[] r5 = {3,1,2};
-        int[] r6 = {1,3,1,1};
+        // int[] r1 = {1,2,2,1};
+        // int[] r2 = {3,1,2};
+        // int[] r3 = {1,3,2};
+        // int[] r4 = {2,4};
+        // int[] r5 = {3,1,2};
+        // int[] r6 = {1,3,1,1};
         System.out.println(leastBricks(wall));
     }
     static List<List<Integer>>  rows = null;
     public static int leastBricks(List<List<Integer>> wall) {
         if (wall == null || wall.get(0)==null) return -1;
         rows = wall;
-        int len = 0,result = 0x7fffffff;
-        for (Integer l : wall.get(0)){
-            len += l;
-        }
+        int result = 0x7fffffff;
+        // for (Integer l : wall.get(0)){
+        //     len += l;
+        // }
         Set<Float> set = new HashSet<>();
         set.add(0.5f);
         for(List<Integer> row : rows){

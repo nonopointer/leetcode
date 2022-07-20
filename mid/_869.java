@@ -1,6 +1,5 @@
 package mid;
 
-import java.util.*;
 
 public class _869 {
     public static void main(String[] args){

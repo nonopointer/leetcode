@@ -28,23 +28,23 @@ public class Test {
         return "";
     }
 
-    private static void test(){
+    // private static void test(){
 
-        int a = 1;
-        List<Integer> l  = new ArrayList<>();
-        while (a <5000){
-            l.add(a);
-            a *= 8;
-        }
-        int r = 0;
-        for ( int x : l){
-            System.out.print(x+"\t");        
-        }
-        System.out.println();
-        for ( int x : l){
-            r += x;
-            System.out.print(r+"\t");        
-        }
+    //     int a = 1;
+    //     List<Integer> l  = new ArrayList<>();
+    //     while (a <5000){
+    //         l.add(a);
+    //         a *= 8;
+    //     }
+    //     int r = 0;
+    //     for ( int x : l){
+    //         System.out.print(x+"\t");        
+    //     }
+    //     System.out.println();
+    //     for ( int x : l){
+    //         r += x;
+    //         System.out.print(r+"\t");        
+    //     }
         
-    }
+    // }
 }

@@ -16,14 +16,14 @@ public class Test {
             if(x > max) max = x; 
         }
         // int mid = (max+min)/2;
-        boolean flag = check(bloomDay,min,max);
+        // boolean flag = check(bloomDay,min,max);
         
 
         return 0;
     }
 
-    private boolean check(int[] bloomDay, int min, int max) {
+    // private boolean check(int[] bloomDay, int min, int max) {
         
-        return false;
-    }
+    //     return false;
+    // }
 }

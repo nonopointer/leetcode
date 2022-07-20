@@ -8,7 +8,7 @@ public class T {
     }
     public static int balancedStringSplit(String s) {
         
-        Stack<Character> stack = new Stack();
+        Stack<Character> stack = new Stack<>();
         for (char c : s.toCharArray()){
             stack.push(c);
         }
