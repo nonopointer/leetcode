@@ -10,24 +10,26 @@ const BASE string = "qwertyuioplkjhgfdsazxcvbnm"
 const BASE_LEN int = 26
 
 func generateTheString(n int) string {
-	rec := make([]int, 26)
-	for n > 0 {
-		cur := rand.Intn(26)
+	rec := make([]int, BASE_LEN)
+	res := make([]byte, n)
+	n += 1
+	for n > 1 {
+		cur := rand.Intn(BASE_LEN)
 		if rec[cur] != 0 {
 			continue
 		}
 		dec := rand.Intn(n)
 		for dec&1 == 0 {
 			dec = rand.Intn(n)
-			fmt.Println(dec)
+			//fmt.Println(dec)
 		}
 		rec[cur] = dec
 		n -= dec
 	}
-	res := make([]byte, 26)
 	i := 0
 	for idx, cnt := range rec {
 		for cnt > 0 {
+			fmt.Println(i, idx)
 			res[i] = BASE[idx]
 			cnt--
 			i++
@@ -38,4 +40,10 @@ func generateTheString(n int) string {
 
 func Test1374(t *testing.T) {
 	fmt.Println(generateTheString(6))
+}
+
+func TestRand(t *testing.T) {
+	for i := 0; i < 1000; i++ {
+		fmt.Println(rand.Intn(10))
+	}
 }
